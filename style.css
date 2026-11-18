@@ -28,7 +28,7 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
 @media(max-width:580px){.categories{grid-template-columns:1fr}.category{min-height:135px}.hero-cover{max-height:170px}.category .emoji{font-size:42px}.category strong{font-size:21px}}
 
 /* Version 4: original cover as a compact background; five centered topic tiles */
-.hero{position:relative;min-height:315px;padding:0;background-color:#123f60;background-image:linear-gradient(90deg,rgba(8,36,59,.07),rgba(8,36,59,.10)),url('assets/facebook-cover.png');background-position:center top;background-repeat:no-repeat;background-size:100% auto;display:flex;align-items:flex-end}
+.hero{position:relative;min-height:315px;padding:0;background-color:#123f60;background-image:linear-gradient(90deg,rgba(8,36,59,.07),rgba(8,36,59,.10)),url('/assets/facebook-cover.png');background-position:center top;background-repeat:no-repeat;background-size:100% auto;display:flex;align-items:flex-end}
 .hero-layout{width:100%;max-width:1160px;display:flex;justify-content:flex-end;align-items:flex-end;padding-bottom:15px}
 .hero-message{background:rgba(10,40,65,.83);color:#fff;padding:10px 17px;border-radius:9px;text-align:right;max-width:430px}
 .hero-kicker{font-size:11px;font-weight:800;letter-spacing:.12em;color:#e5c46c}
@@ -55,7 +55,7 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
   content:"";
   position:absolute;
   inset:-30px;
-  background:url('assets/facebook-cover.png') center center / cover no-repeat;
+  background:url('/assets/facebook-cover.png') center center / cover no-repeat;
   filter:blur(28px) brightness(.50);
   z-index:-2;
 }
@@ -63,7 +63,7 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
   content:"";
   position:absolute;
   inset:0;
-  background:url('assets/facebook-cover.png') center center / auto 100% no-repeat;
+  background:url('/assets/facebook-cover.png') center center / auto 100% no-repeat;
   z-index:-1;
 }
 .hero-layout{
