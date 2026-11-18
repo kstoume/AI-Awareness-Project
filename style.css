@@ -31,7 +31,7 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
 .hero{position:relative;min-height:315px;padding:0;background-color:#123f60;background-image:linear-gradient(90deg,rgba(8,36,59,.07),rgba(8,36,59,.10)),url('/assets/facebook-cover.png');background-position:center top;background-repeat:no-repeat;background-size:100% auto;display:flex;align-items:flex-end}
 .hero-layout{width:100%;max-width:1160px;display:flex;justify-content:flex-end;align-items:flex-end;padding-bottom:15px}
 .hero-message{background:rgba(10,40,65,.83);color:#fff;padding:10px 17px;border-radius:9px;text-align:right;max-width:430px}
-.hero-kicker{font-size:11px;font-weight:800;letter-spacing:.12em;color:#e5c46c}
+.hero-kicker{font-size:clamp(13px,1.3vw,17px);font-weight:800;letter-spacing:.12em;color:#e5c46c}
 .hero-message p{margin:3px 0 0;font-size:14px;line-height:1.4}
 .categories{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .category{min-height:172px;padding:19px 9px;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column}
@@ -39,12 +39,13 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
 .category strong{font-size:18px;line-height:1.25}
 .category small{font-size:12px;line-height:1.4;margin-top:9px}
 @media(max-width:800px){.hero{min-height:260px}.categories{grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.category{min-height:150px;padding:12px 5px}.category .emoji{font-size:39px}.category strong{font-size:14px}.category small{font-size:11px}}
-@media(max-width:580px){.hero{min-height:225px;background-size:auto 100%;background-position:center top}.hero-layout{padding-bottom:9px}.hero-message{padding:7px 10px;max-width:85%}.hero-message p{font-size:11px}.hero-kicker{font-size:9px}.categories{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.category{min-height:125px;padding:10px 3px}.category .emoji{font-size:31px;margin-bottom:10px}.category strong{font-size:11px}.category small{display:none}}
+@media(max-width:580px){.hero{min-height:225px;background-size:auto 100%;background-position:center top}.hero-layout{padding-bottom:9px}.hero-message{padding:7px 10px;max-width:85%}.hero-message p{font-size:11px}.categories{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.category{min-height:125px;padding:10px 3px}.category .emoji{font-size:31px;margin-bottom:10px}.category strong{font-size:11px}.category small{display:none}}
 
 /* Version 5 — show the COMPLETE original Facebook cover without cropping its headline */
 .hero{
   min-height:0;
-  height:clamp(290px,32vw,420px);
+  height:auto;
+  aspect-ratio:628 / 375;
   position:relative;
   overflow:hidden;
   isolation:isolate;
@@ -63,7 +64,7 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
   content:"";
   position:absolute;
   inset:0;
-  background:url('/assets/facebook-cover.png') center center / auto 100% no-repeat;
+  background:url('/assets/facebook-cover.png') center center / 100% 100% no-repeat;
   z-index:-1;
 }
 .hero-layout{
@@ -81,8 +82,7 @@ section{padding:48px 0}.sectionhead{margin-bottom:18px}h2{font-size:29px}.catego
   background:rgba(8,37,59,.90);
 }
 @media(max-width:700px){
- .hero{height:clamp(240px,55vw,340px)}
+ .hero{height:auto}
  .hero-message{position:static;max-width:none;width:100%;border-radius:0;text-align:center}
  .hero-layout{align-items:flex-end}
- .hero::after{background-size:auto 100%}
 }
